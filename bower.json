@@ -1,12 +1,12 @@
 {
-  "name": "bootstrap-theme-themestrap-sample",
+  "name": "bootstrap-theme-Scholarly",
   "version": "0.0.1",
   "private": true,
-  "author": "Your Name",
+  "author": "Tim T.Y. Lin",
   "main": "dist/bootstrap.css",
-  "themestrap": {
-    "name": "Themestrap Sample",
-    "repo": "https://github.com/divshot/themestrap"
+  "scholarlybootstrap": {
+    "name": "Scholarly Bootstrap",
+    "repo": "https://github.com/eVITAERC/bootstrap-theme-Scholarly"
   },
   "ignore": [
     "**/.*",
