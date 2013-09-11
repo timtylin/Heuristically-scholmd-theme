@@ -16,7 +16,7 @@ module.exports = (grunt) ->
           'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
     watch:
       less:
-        files: ['less/*.less']
+        files: ['less/*.less','index.html','examples/*.html']
         tasks: ['copy', 'less:compile', 'clean']
         options:
           livereload: true
@@ -51,7 +51,11 @@ module.exports = (grunt) ->
       bootstrap:
         files: [
           { expand: true, cwd: '<%= bowerDirectory %>/bootstrap/less', src: ['bootstrap.less'], dest: 'tmp/' },
-          { expand: true, cwd: '<%= bowerDirectory %>/bootstrap/fonts', src: ['*'], dest: 'dist/fonts' }
+          { expand: true, cwd: '<%= bowerDirectory %>/bootstrap/fonts', src: ['*'], dest: 'dist/css/fonts/' }
+        ]
+      fonts:
+        files: [
+          { expand: true, cwd: 'fonts', src: ['*'], dest: 'dist/css/fonts/'}
         ]
     clean: ['tmp']
 
