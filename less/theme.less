@@ -9,7 +9,17 @@
  * https://github.com/divshot/themestrap
  */
 
-// --------- Verbose loading to exclude certain files: valid as of v3.0.0
+// --------- Max container width for phones
+
+@max-phone-container-width:       570px;
+
+@media (min-width: @max-phone-container-width) {
+  .container {
+    max-width: @max-phone-container-width;
+  }
+}
+
+// --------- Verbose loading only official Bootstrap files needed: valid as of v3.0.0
 
 // Core variables and mixins
 @import "variables.less";
@@ -72,6 +82,19 @@ html {
 
 p {
   margin: 0 0 @line-height-computed;
+}
+
+// --------- Imaging handling
+
+.img-subfigure(@display: inline;) {
+  display: @display;
+  max-width: 95%; // Part 1: Set a maximum relative to the parent
+  max-height: 500px;
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+figure img {
+  .img-subfigure();
 }
 
 // --------- Navbar
