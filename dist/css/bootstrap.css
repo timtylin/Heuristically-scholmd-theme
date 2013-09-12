@@ -5966,6 +5966,10 @@ html {
 p {
   margin: 0 0 21px;
 }
+body {
+  font-size: 1.55em;
+  line-height: 1.4em;
+}
 figure img {
   display: inline;
   max-width: 95%;
