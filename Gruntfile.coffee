@@ -17,12 +17,12 @@ module.exports = (grunt) ->
     watch:
       less:
         files: ['less/*.less','index.html','examples/*.html']
-        tasks: ['copy', 'less:compile', 'clean']
+        tasks: ['copy', 'less:compile', 'cssmin:minify', 'copy', 'clean']
         options:
           livereload: true
-      cssmin:
-        files: ['dist/css/bootstrap.css']
-        tasks: ['cssmin:minify']
+      # cssmin:
+      #   files: ['dist/css/bootstrap.css']
+      #   tasks: ['cssmin:minify', 'copy']
       assemble:
         files: ['pages/*.html', 'pages/examples/*', 'README.md']
         tasks: ['assemble']
@@ -57,6 +57,10 @@ module.exports = (grunt) ->
         files: [
           { expand: true, cwd: 'fonts', src: ['*'], dest: 'dist/css/fonts/'}
         ]
+      copyToSite:
+        files: [
+          { expand: true, cwd: 'dist/css', src: ['bootstrap.min.css'], dest: '../../eVITAERC.github.io/css/'}
+        ]
     clean: ['tmp']
 
   grunt.loadNpmTasks('grunt-contrib-less')
@@ -69,5 +73,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('assemble')
 
-  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'assemble', 'clean'])
+  grunt.registerTask('default', ['copy', 'less', 'recess', 'cssmin', 'assemble', 'copy', 'clean'])
   grunt.registerTask('serve', ['connect', 'watch'])
