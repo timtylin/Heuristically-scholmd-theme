@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext);
+
 @import url(http://fonts.googleapis.com/css?family=Noticia+Text:400,400italic,700,700italic&subset=latin,latin-ext);
 
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic&subset=latin,latin-ext);
@@ -267,10 +269,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Noticia Text", TeXGyre_Termes, "Times New Roman", Times, serif;
+  font-family: TeXGyre_Termes, "Heuristica", "GandhiSerif", "Noticia Text", "Serif12Beta", "Libre Baskerville", TeXGyre_Termes, "Times New Roman", Times, serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #404040;
+  color: #292929;
   background-color: #ffffff;
 }
 input,
@@ -288,12 +290,12 @@ textarea {
   background-image: none;
 }
 a {
-  color: #333333;
+  color: #222222;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #0d0d0d;
+  color: #000000;
   text-decoration: underline;
 }
 a:focus {
@@ -367,7 +369,7 @@ cite {
   color: #999999;
 }
 .text-primary {
-  color: #333333;
+  color: #222222;
 }
 .text-warning {
   color: #c09853;
@@ -402,7 +404,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: TeXGyre_Termes;
+  font-family: TeXGyre_Termes, "Heuristica", "GandhiSerif", "Noticia Text", "Serif12Beta", "Libre Baskerville", TeXGyre_Termes, "Times New Roman", Times, serif;
   font-weight: normal;
   line-height: 1.1;
 }
@@ -1744,7 +1746,7 @@ textarea.input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #808080;
+  color: #696969;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -1895,8 +1897,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #333333;
-  border-color: #262626;
+  background-color: #222222;
+  border-color: #161616;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1904,8 +1906,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #1f1f1f;
-  border-color: #080808;
+  background-color: #0e0e0e;
+  border-color: #000000;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -1927,8 +1929,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #333333;
-  border-color: #262626;
+  background-color: #222222;
+  border-color: #161616;
 }
 .btn-warning {
   color: #ffffff;
@@ -2079,7 +2081,7 @@ fieldset[disabled] .btn-info.active {
   border-color: #46b8da;
 }
 .btn-link {
-  color: #333333;
+  color: #222222;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2100,7 +2102,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #0d0d0d;
+  color: #000000;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2838,7 +2840,7 @@ input[type="button"].btn-block {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #ffffff;
-  background-color: #333333;
+  background-color: #222222;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -2846,7 +2848,7 @@ input[type="button"].btn-block {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #333333;
+  background-color: #222222;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3331,7 +3333,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #333333;
+  border-color: #222222;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3403,7 +3405,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #333333;
+  background-color: #222222;
 }
 .nav-stacked > li {
   float: none;
@@ -3470,12 +3472,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: block;
 }
 .nav .caret {
-  border-top-color: #333333;
-  border-bottom-color: #333333;
+  border-top-color: #222222;
+  border-bottom-color: #222222;
 }
 .nav a:hover .caret {
-  border-top-color: #0d0d0d;
-  border-bottom-color: #0d0d0d;
+  border-top-color: #000000;
+  border-bottom-color: #000000;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -4080,8 +4082,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #333333;
-  border-color: #333333;
+  background-color: #222222;
+  border-color: #222222;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -4214,11 +4216,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #808080;
 }
 .label-primary {
-  background-color: #333333;
+  background-color: #222222;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #1a1a1a;
+  background-color: #090909;
 }
 .label-success {
   background-color: #5cb85c;
@@ -4277,7 +4279,7 @@ a.badge:focus {
 }
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #333333;
+  color: #222222;
   background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
@@ -4335,7 +4337,7 @@ a.list-group-item.active > .badge,
 }
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #333333;
+  border-color: #222222;
 }
 .thumbnail > img {
   margin-left: auto;
@@ -4343,7 +4345,7 @@ a.thumbnail:focus {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #404040;
+  color: #292929;
 }
 .alert {
   padding: 15px;
@@ -4466,7 +4468,7 @@ a.thumbnail:focus {
   font-size: 12px;
   color: #ffffff;
   text-align: center;
-  background-color: #333333;
+  background-color: #222222;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -4593,8 +4595,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #333333;
-  border-color: #333333;
+  background-color: #222222;
+  border-color: #222222;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -4604,7 +4606,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #999999;
+  color: #888888;
 }
 .list-group-item-heading {
   margin-top: 0;
@@ -4727,18 +4729,18 @@ a.list-group-item:focus {
   border-bottom-color: #ffffff;
 }
 .panel-primary {
-  border-color: #333333;
+  border-color: #222222;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #333333;
-  border-color: #333333;
+  background-color: #222222;
+  border-color: #222222;
 }
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #333333;
+  border-top-color: #222222;
 }
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #333333;
+  border-bottom-color: #222222;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -5926,7 +5928,7 @@ td.visible-print {
  * https://github.com/divshot/themestrap
  */
 /*!
- * Latin Modern 10 font for Scholarly Bootstrap
+ * TeXGyre_Termes font for Scholarly Bootstrap
  *
  * Copyright 2013 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
@@ -5936,31 +5938,35 @@ td.visible-print {
  * https://github.com/divshot/themestrap
  */
 @font-face {
-  font-family: 'LatinModern10';
-  src: url('fonts/lmroman10-regular.otf') format('opentype');
+  font-family: 'TeXGyre_Termes';
+  src: url('fonts/texgyretermes-regular.eot');
+  src: url('fonts/texgyretermes-regular.eot?#iefix') format('embedded-opentype'), url('fonts/texgyretermes-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatinModern10';
-  src: url('fonts/lmroman10-italic.otf') format('opentype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'LatinModern10';
-  src: url('fonts/lmroman12-bold.otf') format('opentype');
+  font-family: 'TeXGyre_Termes';
+  src: url('fonts/texgyretermes-bold.eot');
+  src: url('fonts/texgyretermes-bold.eot?#iefix') format('embedded-opentype'), url('fonts/texgyretermes-bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatinModern10';
-  src: url('fonts/lmroman10-bolditalic.otf') format('opentype');
+  font-family: 'TeXGyre_Termes';
+  src: url('fonts/texgyretermes-italic.eot');
+  src: url('fonts/texgyretermes-italic.eot?#iefix') format('embedded-opentype'), url('fonts/texgyretermes-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'TeXGyre_Termes';
+  src: url('fonts/texgyretermes-bolditalic.eot');
+  src: url('fonts/texgyretermes-bolditalic.eot?#iefix') format('embedded-opentype'), url('fonts/texgyretermes-bolditalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 /*!
- * Latin Modern 8 font for Scholarly Bootstrap
+ * Heuristica font for Scholarly Bootstrap
  *
  * Copyright 2013 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
@@ -5970,31 +5976,35 @@ td.visible-print {
  * https://github.com/divshot/themestrap
  */
 @font-face {
-  font-family: 'LatinModern8';
-  src: url('fonts/lmroman8-regular.otf') format('opentype');
+  font-family: 'Heuristica';
+  src: url('fonts/Heuristica-Regular.eot');
+  src: url('fonts/Heuristica-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Heuristica-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatinModern8';
-  src: url('fonts/lmroman8-italic.otf') format('opentype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'LatinModern8';
-  src: url('fonts/lmroman8-bold.otf') format('opentype');
+  font-family: 'Heuristica';
+  src: url('fonts/Heuristica-Bold.eot');
+  src: url('fonts/Heuristica-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Heuristica-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'LatinModern8';
-  src: url('fonts/lmroman10-bolditalic.otf') format('opentype');
+  font-family: 'Heuristica';
+  src: url('fonts/Heuristica-Italic.eot');
+  src: url('fonts/Heuristica-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/Heuristica-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Heuristica';
+  src: url('fonts/Heuristica-BoldItalic.eot');
+  src: url('fonts/Heuristica-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/Heuristica-BoldItalic.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
 }
 /*!
- * Latin Modern 8 font for Scholarly Bootstrap
+ * Serif12 Beta font for Scholarly Bootstrap
  *
  * Copyright 2013 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
@@ -6004,26 +6014,68 @@ td.visible-print {
  * https://github.com/divshot/themestrap
  */
 @font-face {
-  font-family: 'MathJax_Main';
-  src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff');
+  font-family: 'Serif12Beta';
+  src: url('fonts/Serif12Beta-Regular.eot');
+  src: url('fonts/Serif12Beta-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/Serif12Beta-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'MathJax_Main';
-  src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'MathJax_Main';
-  src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff');
+  font-family: 'Serif12Beta';
+  src: url('fonts/Serif12Beta-Bold.eot');
+  src: url('fonts/Serif12Beta-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Serif12Beta-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'MathJax_Main';
-  src: url('http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff');
+  font-family: 'Serif12Beta';
+  src: url('fonts/Serif12Beta-Italic.eot');
+  src: url('fonts/Serif12Beta-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/Serif12Beta-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Serif12Beta';
+  src: url('fonts/Serif12Beta-BoldItalic.eot');
+  src: url('fonts/Serif12Beta-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/Serif12Beta-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+/*!
+ * Gandhi Serif font for Scholarly Bootstrap
+ *
+ * Copyright 2013 Tim T.Y. Lin
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * This theme was built using the Themestrap Bootstrap Theme Kit.
+ * https://github.com/divshot/themestrap
+ */
+@font-face {
+  font-family: 'GandhiSerif';
+  src: url('fonts/GandhiSerif-Regular.eot');
+  src: url('fonts/GandhiSerif-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/GandhiSerif-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GandhiSerif';
+  src: url('fonts/GandhiSerif-Bold.eot');
+  src: url('fonts/GandhiSerif-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/GandhiSerif-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GandhiSerif';
+  src: url('fonts/GandhiSerif-Italic.eot');
+  src: url('fonts/GandhiSerif-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/GandhiSerif-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GandhiSerif';
+  src: url('fonts/GandhiSerif-BoldItalic.eot');
+  src: url('fonts/GandhiSerif-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/GandhiSerif-BoldItalic.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
 }
@@ -6034,8 +6086,8 @@ p {
   margin: 0 0 20px;
 }
 body {
-  font-size: 1.4em;
-  line-height: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 h1,
 .h1 {
