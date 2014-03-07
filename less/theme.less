@@ -39,21 +39,21 @@
 @import "buttons.less";
 
 // Components
-@import "component-animations.less";
-@import "glyphicons.less";
+// @import "component-animations.less";
+// @import "glyphicons.less";
 @import "dropdowns.less";
-@import "button-groups.less";
-@import "input-groups.less";
+// @import "button-groups.less";
+// @import "input-groups.less";
 @import "navs.less";
 @import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
+// @import "breadcrumbs.less";
+// @import "pagination.less";
+// @import "pager.less";
 @import "labels.less";
 @import "badges.less";
-@import "jumbotron.less";
+// @import "jumbotron.less";
 @import "thumbnails.less";
-@import "alerts.less";
+// @import "alerts.less";
 @import "progress-bars.less";
 @import "media.less";
 @import "list-group.less";
@@ -62,10 +62,10 @@
 @import "close.less";
 
 // Components w/ JavaScript
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";
+// @import "modals.less";
+// @import "tooltip.less";
+// @import "popovers.less";
+// @import "carousel.less";
 
 // Utility classes
 @import "utilities.less";
@@ -80,38 +80,80 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+#wrapper {
+  .container();
+  width: 700px;
+}
+
 p {
   margin: 0 0 @line-height-computed;
 }
 
-body {
-  font-size: 1.2em;
-  line-height: 1.5;
+img {
+  vertical-align: bottom;
 }
 
-h1, .h1 { font-size: floor(@font-size-base * 2.0); }
-h2, .h2 { font-size: floor(@font-size-base * 2.0); }
-h3, .h3 { font-size: ceil(@font-size-base * 1.70); }
-h4, .h4 { font-size: ceil(@font-size-base * 1.25); }
+h1, .h1 { font-size: floor(@font-size-base * 2.00);}
+h2, .h2 { font-size: floor(@font-size-base * 1.30); margin: (@line-height-computed) 0 (@line-height-computed);}
+h3, .h3 { font-size: floor(@font-size-base * 1.10); margin: 0 0 (@line-height-computed);}
+h4, .h4 { font-size: floor(@font-size-base * 1.05);}
 h5, .h5 { font-size:  @font-size-base; }
-h6, .h6 { font-size:  @font-size-base; }
+h6, .h6 { font-size:  @font-size-base; font-weight: normal;}
 
-h1 small, .h1 small { font-size: ceil(@font-size-base * 1.2); } *
-h2 small, .h2 small { font-size: ceil(@font-size-base * 1.2); } *
+h1 small, .h1 small { font-size: ceil(@font-size-base * 1.50); }
+h2 small, .h2 small { font-size: ceil(@font-size-base * 1.10); }
 h3 small, .h3 small,
 h4 small, .h4 small { font-size: @font-size-base; }
 
-// --------- Imaging handling
-
-.img-subfigure(@display: inline;) {
-  display: @display;
-  max-width: 95%; // Part 1: Set a maximum relative to the parent
-  max-height: 500px;
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+figcaption {
+  font-size: ceil(@font-size-base * 0.9);
+  line-height: @line-height-base * 0.8;
 }
 
-figure img {
-  .img-subfigure();
+// --------- Imaging handling
+
+.img-inFigure() {
+  max-width: 100%;
+  height: auto;
+}
+
+figure>img {
+  .img-inFigure();
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure>figure>img {
+  .img-inFigure();
+}
+
+figure {
+  text-align: center;
+  margin:20px auto 20px;
+  padding: 10px 0px 10px;
+  width: 100%;
+}
+
+figure>figure {
+  margin: 0px auto 5px;
+  padding: 0px 0px 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+figure>figure>figcaption {
+  padding: 10px 0px 0px;
+}
+
+figure>figcaption {
+  text-align: justify;
+  margin: 0px auto 0px;
+  padding: 10px 0px 5px;
+  width: 90%;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
 }
 
 // --------- Navbar

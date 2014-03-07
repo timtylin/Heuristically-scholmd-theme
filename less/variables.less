@@ -28,7 +28,7 @@
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            lighten(#000, 16%);
+@text-color:            lighten(#000, 10%);
 
 // Links
 // -------------------------
@@ -40,20 +40,20 @@
 // -------------------------
 
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       TeXGyre_Termes, "Heuristica", "GandhiSerif", "Noticia Text", "Serif12Beta", "Libre Baskerville", TeXGyre_Termes, "Times New Roman", Times, serif;
+// @font-family-serif:       Georgia, TeXGyre_Termes, "Heuristica", "GandhiSerif", "Noticia Text", "Serif12Beta", "Libre Baskerville", TeXGyre_Termes, "Times New Roman", Times, serif;
+@font-family-serif:       TeXGyre_Termes, "Noticia Text", "Times New Roman", Times, serif;
 @font-family-monospace:   Inconsolata, Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-serif;
 
-@font-size-base:          14px;
+@font-size-base:          17px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
-@line-height-base:        1.428571429; // 20/14
-// @line-height-base:        1.5; // 20/14
+@line-height-base:        1.4;
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-serif;
-@headings-font-weight:    normal;
+@headings-font-weight:    bold;
 @headings-line-height:    1.1;
 
 // Iconography
@@ -581,8 +581,8 @@
 
 // Code
 // ------------------------
-@code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-color:                  @gray-dark;
+@code-bg:                     #f5f5f5;
 
 @pre-bg:                      #f5f5f5;
 @pre-color:                   @gray-dark;
