@@ -619,8 +619,8 @@ pre {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #333333;
-  background-color: #f5f5f5;
+  color: #1a1a1a;
+  background-color: #ffffff;
   white-space: nowrap;
   border-radius: 2px;
 }
@@ -4370,21 +4370,25 @@ figure > figure > img {
   height: auto;
 }
 figure {
+  position: relative;
   text-align: center;
   margin: 20px auto 20px;
   padding: 10px 0px 10px;
   width: 100%;
 }
 figure > figure {
+  position: relative;
   margin: 0px auto 5px;
   padding: 0px 0px 0px;
   max-width: 100%;
   height: auto;
 }
 figure > figure > figcaption {
-  padding: 10px 0px 0px;
+  padding: 5px 0px 5px;
 }
 figure > figcaption {
+  left: auto;
+  right: auto;
   text-align: justify;
   margin: 0px auto 0px;
   padding: 10px 0px 5px;
