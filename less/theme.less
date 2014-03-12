@@ -106,8 +106,8 @@ h3 small, .h3 small,
 h4 small, .h4 small { font-size: @font-size-base; }
 
 figcaption {
-  font-size: ceil(@font-size-base * 0.9);
-  line-height: @line-height-base * 0.8;
+  font-size: ceil(@font-size-base * 1.0);
+  line-height: @line-height-base * 0.9;
 }
 
 // --------- Imaging handling
@@ -136,6 +136,7 @@ figure {
   width: 100%;
 }
 
+
 figure>figure {
   position: relative;
   margin: 0px auto 5px;
@@ -159,6 +160,19 @@ figure>figcaption {
   -webkit-box-align: center;
   -webkit-box-pack: center;
 }
+
+figure.algorithm {
+  border-top: 1.5px solid @gray-dark;
+  text-align: left;
+  padding: 6px 0px 6px;
+  width: 80%;
+}
+
+figure.algorithm>figcaption {
+  border-top: 1.5px solid @gray-dark;
+  width: 100%;
+}
+
 
 // --------- Navbar
 
