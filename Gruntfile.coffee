@@ -59,7 +59,8 @@ module.exports = (grunt) ->
         ]
       copyToSite:
         files: [
-          { expand: true, cwd: 'dist/css', src: ['bootstrap.min.css'], dest: '../../eVITAERC.github.io/css/'}
+          { expand: true, cwd: 'dist/css', src: ['bootstrap.min.css'], dest: '../../eVITAERC.github.io/css/'},
+          { expand: true, cwd: 'dist/css', src: ['bootstrap.css'], dest: '~/Dropbox/ScholarlyMarkdown/ExtraTests/SEGabs/css/ScholarlyMarkdown-BS3.css'}
         ]
     clean: ['tmp']
 

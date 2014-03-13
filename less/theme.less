@@ -80,9 +80,28 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+div.scholmd-container {
+  .container;
+}
+
+div.scholmd-main {
+  .make-row();
+}
+
+div.scholmd-content {
+  .make-lg-column(8);
+  .make-lg-column-offset(2);
+  .make-md-column(10);
+  .make-md-column-offset(1);
+  .make-sm-column(10);
+  .make-sm-column-offset(1);
+  .make-xs-column(12);
+}
+
+// for Marked
 #wrapper {
-  .container();
-  width: 700px;
+  .make-row();
+  padding: 0 100px 0;
 }
 
 p {
@@ -138,9 +157,10 @@ figure {
 
 
 figure>figure {
+  vertical-align: middle;
   position: relative;
   margin: 0px auto 5px;
-  padding: 0px 0px 0px;
+  padding: 0px 4px 0px;
   max-width: 100%;
   height: auto;
 }
@@ -163,7 +183,6 @@ figure>figcaption {
 
 figcaption>strong {
   display: inline;
-  width: 100%;
 }
 
 figure.algorithm {
@@ -178,30 +197,28 @@ figure.algorithm>figcaption {
   width: 100%;
 }
 
-figure>table {
-  position: relative;
-  margin: 0px auto 5px;
-  padding: 0px 0px 0px;
-  max-width: 100%;
-  height: auto;
+figure.algorithm>p {
+  margin-bottom: 15px;
 }
 
-figure>table {
-  position: relative;
-  margin: 0px auto 10px;
-  padding: 10px 0px 10px;
-  max-width: 90%;
+figure.tableFloat {
+  max-width: 80%;
 }
 
-figure>table {
-  .table();
-  .table-hover();
+figure.tableFloat>table {
+  .table;
+  .table-hover;
+  display: inline-table;
   position: relative;
   margin: 0px auto 5px;
   padding: 0px 0px 0px;
   width: auto;
-  max-width: 90%;
-  height: auto;
+  max-width: 100%;
+}
+
+figure.tableFloat>figcaption {
+  width: auto;
+  max-width: 100%;
 }
 
 // --------- Navbar
@@ -213,4 +230,3 @@ figure>table {
 .navbar {
   border-bottom: 1px solid @gray-dark;
 }
-
