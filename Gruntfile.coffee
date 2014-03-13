@@ -7,13 +7,13 @@ module.exports = (grunt) ->
           compress: false
           paths: ['less', 'tmp', '<%= bowerDirectory %>/bootstrap/less']
         files:
-          'dist/css/bootstrap.css': ['less/theme.less']
+          'dist/css/ScholarlyMarkdown-BS3.css': ['less/theme.less']
     recess:
       dist:
         options:
           compile: true
         files:
-          'dist/css/bootstrap.css': ['dist/css/bootstrap.css']
+          'dist/css/ScholarlyMarkdown-BS3.css': ['dist/css/ScholarlyMarkdown-BS3.css']
     watch:
       less:
         files: ['less/*.less','index.html','examples/*.html']
@@ -59,8 +59,7 @@ module.exports = (grunt) ->
         ]
       copyToSite:
         files: [
-          { expand: true, cwd: 'dist/css', src: ['bootstrap.min.css'], dest: '../../eVITAERC.github.io/css/'},
-          { expand: true, cwd: 'dist/css', src: ['bootstrap.css'], dest: '~/Dropbox/ScholarlyMarkdown/ExtraTests/SEGabs/css/ScholarlyMarkdown-BS3.css'}
+          { expand: true, cwd: 'dist/css', src: ['ScholarlyMarkdown-BS3.min.css'], dest: '../../eVITAERC.github.io/css/'},
         ]
     clean: ['tmp']
 
