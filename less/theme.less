@@ -35,8 +35,8 @@
 @import "code.less";
 @import "grid.less";
 @import "tables.less";
-@import "forms.less";
-@import "buttons.less";
+// @import "forms.less";
+// @import "buttons.less";
 
 // Components
 // @import "component-animations.less";
@@ -45,21 +45,21 @@
 // @import "button-groups.less";
 // @import "input-groups.less";
 @import "navs.less";
-@import "navbar.less";
+// @import "navbar.less";
 // @import "breadcrumbs.less";
 // @import "pagination.less";
 // @import "pager.less";
-@import "labels.less";
-@import "badges.less";
+// @import "labels.less";
+// @import "badges.less";
 // @import "jumbotron.less";
-@import "thumbnails.less";
+// @import "thumbnails.less";
 // @import "alerts.less";
-@import "progress-bars.less";
-@import "media.less";
+// @import "progress-bars.less";
+// @import "media.less";
 @import "list-group.less";
-@import "panels.less";
-@import "wells.less";
-@import "close.less";
+// @import "panels.less";
+// @import "wells.less";
+// @import "close.less";
 
 // Components w/ JavaScript
 // @import "modals.less";
@@ -80,9 +80,28 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+div.scholmd-container {
+  .container;
+}
+
+div.scholmd-main {
+  .make-row();
+}
+
+div.scholmd-content {
+  .make-lg-column(8);
+  .make-lg-column-offset(2);
+  .make-md-column(10);
+  .make-md-column-offset(1);
+  .make-sm-column(10);
+  .make-sm-column-offset(1);
+  .make-xs-column(12);
+}
+
+// for Marked
 #wrapper {
-  .container();
-  width: 700px;
+  .make-row();
+  padding: 0 100px 0;
 }
 
 p {
@@ -106,8 +125,8 @@ h3 small, .h3 small,
 h4 small, .h4 small { font-size: @font-size-base; }
 
 figcaption {
-  font-size: ceil(@font-size-base * 0.9);
-  line-height: @line-height-base * 0.8;
+  font-size: ceil(@font-size-base * 1.0);
+  line-height: @line-height-base * 0.9;
 }
 
 // --------- Imaging handling
@@ -137,9 +156,10 @@ figure {
 }
 
 figure>figure {
+  vertical-align: middle;
   position: relative;
   margin: 0px auto 5px;
-  padding: 0px 0px 0px;
+  padding: 0px 4px 0px;
   max-width: 100%;
   height: auto;
 }
@@ -159,6 +179,40 @@ figure>figcaption {
   -webkit-box-align: center;
   -webkit-box-pack: center;
 }
+
+figure.algorithm {
+  text-align: left;
+  width: 80%;
+  border-top: 1px solid @gray-darker;
+}
+
+figure.algorithm>p {
+  margin-bottom: 15px;
+}
+
+figure.algorithm>figcaption {
+  border-top: 1px solid @gray-darker;
+  width: 100%
+}
+
+figure.tableFloat {
+  max-width: 90%;
+}
+
+figure.tableFloat>table {
+  .table;
+  .table-hover;
+  display: inline-table;
+  position: relative;
+  width: auto;
+  max-width: 100%;
+}
+
+figure.tableFloat>figcaption {
+  width: auto;
+  max-width: 100%;
+}
+
 
 // --------- Navbar
 
