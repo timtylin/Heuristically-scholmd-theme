@@ -108,13 +108,15 @@ p {
   margin: 0 0 @line-height-computed;
 }
 
-img {
-  vertical-align: bottom;
-}
+// --------- Text
 
-h1, .h1 { font-size: floor(@font-size-base * 2.00);}
-h2, .h2 { font-size: floor(@font-size-base * 1.30); margin: (@line-height-computed) 0 (@line-height-computed);}
-h3, .h3 { font-size: floor(@font-size-base * 1.10); margin: 0 0 (@line-height-computed);}
+h1, .h1 { font-size: floor(@font-size-base * 2.00);
+          font-weight: normal;
+          font-family: Georgia, @headings-font-family;}
+h2, .h2 { font-size: floor(@font-size-base * 1.30);
+          margin: (@line-height-computed) 0 (@line-height-computed);}
+h3, .h3 { font-size: floor(@font-size-base * 1.10);
+          margin: 0 0 (@line-height-computed);}
 h4, .h4 { font-size: floor(@font-size-base * 1.05);}
 h5, .h5 { font-size:  @font-size-base; }
 h6, .h6 { font-size:  @font-size-base; font-weight: normal;}
@@ -129,7 +131,15 @@ figcaption {
   line-height: @line-height-base * 0.9;
 }
 
+code {
+  font-size: round(@font-size-base * 0.95);
+}
+
 // --------- Imaging handling
+
+img {
+  vertical-align: bottom;
+}
 
 .img-inFigure() {
   max-width: 100%;
@@ -146,6 +156,8 @@ figure>img {
 figure>figure>img {
   .img-inFigure();
 }
+
+// ----------- Figures and other Floats
 
 figure {
   position: relative;
@@ -217,6 +229,15 @@ figure.tableFloat>table {
 }
 
 figure.tableFloat>figcaption {
+  width: auto;
+  max-width: 100%;
+}
+
+figure.codeFloat {
+  max-width: 80%;
+}
+
+figure.codeFloat>figcaption {
   width: auto;
   max-width: 100%;
 }
