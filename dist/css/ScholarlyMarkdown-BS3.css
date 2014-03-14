@@ -2421,6 +2421,9 @@ figure.algorithm > p {
 figure.tableFloat {
   max-width: 80%;
 }
+table {
+  display: inline-table;
+}
 figure.tableFloat > table {
   width: 100%;
   margin-bottom: 24px;
@@ -2470,6 +2473,16 @@ figure.tableFloat > figcaption {
 }
 figure.codeFloat {
   max-width: 80%;
+}
+figure.codeFloat > pre {
+  text-align: left;
+  width: auto;
+  max-width: 100%;
+}
+figure.codeFloat > table {
+  text-align: left;
+  width: auto;
+  max-width: 100%;
 }
 figure.codeFloat > figcaption {
   width: auto;
