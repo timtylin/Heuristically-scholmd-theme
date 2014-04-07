@@ -2280,7 +2280,7 @@ div.scholmd-content {
 #wrapper {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 0 100px 0;
+  padding: 0 30px 0;
 }
 #wrapper:before,
 #wrapper:after {
@@ -2476,17 +2476,34 @@ figure.codeFloat {
 }
 figure.codeFloat > pre {
   text-align: left;
+  overflow-x: auto;
+}
+figure.codeFloat > pre > code {
+  text-align: left;
   width: auto;
   max-width: 100%;
+  white-space: pre;
+  word-wrap: inherit;
+  word-break: normal;
 }
 figure.codeFloat > table {
   text-align: left;
   width: auto;
   max-width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 figure.codeFloat > figcaption {
   width: auto;
   max-width: 100%;
+}
+pre {
+  word-wrap: inherit;
+  word-break: normal;
+  white-space: pre;
+}
+.displayMath {
+  overflow-x: auto;
 }
 .dropdown-menu {
   -webkit-box-shadow: none;
