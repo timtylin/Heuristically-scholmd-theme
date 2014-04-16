@@ -9,16 +9,6 @@
  * https://github.com/divshot/themestrap
  */
 
-// --------- Max container width for phones
-
-@max-phone-container-width:       570px;
-
-@media (min-width: @max-phone-container-width) {
-  .container {
-    max-width: @max-phone-container-width;
-  }
-}
-
 // --------- Verbose loading only official Bootstrap files needed: valid as of v3.0.0
 
 // Core variables and mixins
@@ -80,15 +70,15 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-div.scholmd-container {
+.scholmd-container {
   .container;
 }
 
-div.scholmd-main {
+.scholmd-main {
   .make-row();
 }
 
-div.scholmd-content {
+.scholmd-content {
   .make-lg-column(8);
   .make-lg-column-offset(2);
   .make-md-column(10);
@@ -104,22 +94,13 @@ div.scholmd-content {
   padding: 0 30px 0;
 }
 
-p {
-  margin: 0 0 @line-height-computed;
-}
-
 // --------- Text
 
-h1, .h1 { font-size: floor(@font-size-base * 2.00);
-          font-weight: normal;
-          font-family: Georgia, @headings-font-family;}
-h2, .h2 { font-size: floor(@font-size-base * 1.30);
-          margin: (@line-height-computed) 0 (@line-height-computed);}
-h3, .h3 { font-size: floor(@font-size-base * 1.10);
-          margin: 0 0 (@line-height-computed);}
-h4, .h4 { font-size: floor(@font-size-base * 1.05);}
-h5, .h5 { font-size:  @font-size-base; }
-h6, .h6 { font-size:  @font-size-base; font-weight: normal;}
+h1, .h1 { font-weight: normal; }
+h2, .h2 { margin: (@line-height-computed*1.5) 0 (@line-height-computed/2);
+          font-weight: normal; }
+h3, .h3 { margin: (@line-height-computed/2) 0;}
+h6, .h6 { font-weight: normal;}
 
 h1 small, .h1 small { font-size: ceil(@font-size-base * 1.50); }
 h2 small, .h2 small { font-size: ceil(@font-size-base * 1.10); }
@@ -129,10 +110,16 @@ h4 small, .h4 small { font-size: @font-size-base; }
 figcaption {
   font-size: ceil(@font-size-base * 1.0);
   line-height: @line-height-base * 0.9;
+  .hyphens();
 }
 
 code {
   font-size: round(@font-size-base * 0.95);
+}
+
+p {
+  margin: (@line-height-computed/2) 0;
+  .hyphens();
 }
 
 // --------- Imaging handling
@@ -165,11 +152,6 @@ figure>figure>img {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-}
-
-.use-inlineflex() {
-  display: -webkit-inline-flex;
-  display: inline-flex;
 }
 
 .flex-centerAlign() {
