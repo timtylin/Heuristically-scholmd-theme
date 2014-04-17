@@ -64,6 +64,10 @@
 // Font import
 @import "Scholarly-fonts.less";
 
+// Scholarly Markdown core
+
+@import "Scholarly-core.less";
+
 // --------- Core Scaffolding
 
 html {
@@ -97,9 +101,11 @@ html {
 // --------- Text
 
 h1, .h1 { font-weight: normal; }
-h2, .h2 { margin: (@line-height-computed*1.5) 0 (@line-height-computed/2);
-          font-weight: normal; }
-h3, .h3 { margin: (@line-height-computed/2) 0;}
+h2, .h2 { margin: 0 0 ceil(@line-height-computed * 0.5);
+          font-weight: normal;
+          padding: ceil(@line-height-computed * 1.5) 0 ceil(@line-height-computed * 0.5) - 1;
+          border-bottom: 1px solid @gray-light; }
+h3, .h3 { margin: 0 0 ceil(@line-height-computed);}
 h6, .h6 { font-weight: normal;}
 
 h1 small, .h1 small { font-size: ceil(@font-size-base * 1.50); }
@@ -118,130 +124,32 @@ code {
 }
 
 p {
-  margin: (@line-height-computed/2) 0;
+  margin: 0 0 @line-height-computed;
   .hyphens();
 }
 
-// --------- Imaging handling
-
-img {
-  vertical-align: bottom;
+li>p {
+  margin: ceil(@line-height-computed/2) 0;
 }
 
-.img-inFigure() {
-  max-width: 100%;
-  height: auto;
-}
-
-figure>img {
-  .img-inFigure();
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-figure>figure>img {
-  .img-inFigure();
-}
 
 // ----------- Figures and other Floats
 
-.use-flex() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.flex-centerAlign() {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-figure {
-  position: relative;
-  text-align: center;
-  margin:20px auto 20px;
-  padding: 10px 0px 10px;
-  width: 100%;
-}
-
-
-figure>figure {
-  vertical-align: middle;
-  position: relative;
-  margin: 0px auto 5px;
-  padding: 0px 4px 0px;
-  max-width: 100%;
-  height: auto;
-}
-
-figure>figure>figcaption {
-  padding: 5px 0px 5px;
-}
-
-figure>.figcaption_wrapper {
-  left: auto;
-  right: auto;
-  text-align: justify;
-  margin: 0px auto 0px;
-  padding: 10px 0px 5px;
-  width: 90%;
-  .use-flex();
-  .flex-centerAlign();
-}
-
 figure.algorithm {
   border-top: 1.5px solid @gray-dark;
-  text-align: left;
-  padding: 6px 0px 6px;
-  width: 80%;
 }
 
 figure.algorithm>figcaption {
   border-top: 1.5px solid @gray-dark;
-  width: 100%;
 }
 
 figure.algorithm>p {
   margin-bottom: 15px;
 }
 
-figure.tableFloat {
-  max-width: 80%;
-}
-
-table {
-  display: inline-table;
-}
-
 figure.tableFloat>table {
   .table;
   .table-hover;
-  display: inline-table;
-  position: relative;
-  margin: 0px auto 5px;
-  padding: 0px 0px 0px;
-  width: auto;
-  max-width: 100%;
-}
-
-figure.tableFloat>figcaption {
-  width: auto;
-  max-width: 100%;
-}
-
-figure.codeFloat {
-  max-width: 80%;
 }
 
 figure.codeFloat>pre {
@@ -249,44 +157,10 @@ figure.codeFloat>pre {
   overflow-x: auto;
 }
 
-figure.codeFloat>pre>code {
-  text-align: left;
-  width: auto;
-  max-width: 100%;
-  white-space: pre;
-  word-wrap: inherit;
-  word-break: normal;
-}
-
 figure.codeFloat>table {
-  text-align: left;
-  width: auto;
-  max-width: 100%;
-  white-space: nowrap;
   overflow-x: auto;
-}
-
-figure.codeFloat>figcaption {
-  width: auto;
-  max-width: 100%;
-}
-
-pre {
-  word-wrap: inherit;
-  word-break: normal;
-  white-space: pre;
 }
 
 .displayMath {
   overflow-x: auto;
-}
-
-// --------- Navbar
-
-.dropdown-menu {
-  .box-shadow(none);
-}
-
-.navbar {
-  border-bottom: 1px solid @gray-dark;
 }
