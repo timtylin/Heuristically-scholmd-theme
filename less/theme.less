@@ -83,22 +83,22 @@ html {
 }
 
 .scholmd-content {
-  .make-lg-column(8);
-  .make-lg-column-offset(2);
-  .make-md-column(10);
-  .make-md-column-offset(1);
+  .make-xs-column(12);
   .make-sm-column(10);
   .make-sm-column-offset(1);
-  .make-xs-column(12);
+  .make-md-column(10);
+  .make-md-column-offset(1);
 }
 
 // for Marked
 #wrapper {
   .make-row();
-  padding: 0 30px 0;
+  padding: 0 50px 0;
 }
 
 // --------- Text
+
+// sizes and spacing rules
 
 h1, .h1 { font-weight: normal; }
 h2, .h2 { margin: 0 0 ceil(@line-height-computed * 0.5);
@@ -128,10 +128,31 @@ p {
   .hyphens();
 }
 
+pre {
+  margin: 0 0 @line-height-computed;
+  overflow-x: auto;
+}
+
 li>p {
   margin: ceil(@line-height-computed/2) 0;
 }
 
+// responsive breaking rules
+
+// Code blocks break on modbile devices (except within floats and codeblocks, which overflox scroll)
+@media (max-width: @screen-sm-max) {
+  code {
+    .hard-break();
+  }
+  
+  pre>code {
+    .no-break();
+  }
+  
+  figure code {
+    .no-break();
+  }
+}
 
 // ----------- Figures and other Floats
 
@@ -150,6 +171,8 @@ figure.algorithm>p {
 figure.tableFloat>table {
   .table;
   .table-hover;
+  width: auto;
+  overflow-x: auto;
 }
 
 figure.codeFloat>pre {
@@ -164,3 +187,6 @@ figure.codeFloat>table {
 .displayMath {
   overflow-x: auto;
 }
+
+
+//TODO
