@@ -1,7 +1,7 @@
 /*!
- * Scholarly Bootstrap v0.0.1
+ * Scholarly Bootstrap v0.0.2
  *
- * Copyright 2013 Tim T.Y. Lin
+ * Copyright 2014 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -2354,7 +2354,7 @@ a.list-group-item-danger.active:focus {
   }
 }
 
-/*!
+/*
  * Font Collection for Scholarly Bootstrap
  *
  * Copyright 2013 Tim T.Y. Lin
@@ -2365,7 +2365,7 @@ a.list-group-item-danger.active:focus {
  * https://github.com/divshot/themestrap
  */
 
-/*!
+/*
  * Heuristica font for Scholarly Bootstrap
  *
  * Copyright 2013 Tim T.Y. Lin
@@ -2408,7 +2408,7 @@ a.list-group-item-danger.active:focus {
   src: url('fonts/heuristica-bolditalic.eot?#iefix') format('embedded-opentype'), url('fonts/heuristica-bolditalic.ttf') format('truetype');
 }
 
-/*!
+/*
  * Core CSS scaffold for Scholarly Markdown HTML
  *
  * Copyright 2013 Tim T.Y. Lin
