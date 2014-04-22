@@ -8,12 +8,16 @@
  */
 
 
-// --- Imaging handling
+// --- Base formatting
 
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: bottom;
+  vertical-align: baseline;
+}
+
+table {
+  display: inline-table;
 }
 
 // --- Line-break handling
@@ -50,6 +54,21 @@ pre code {
 
 // --- Scholarly Floats and Figures
 
+// Basic formatting of caption prefixes
+.scholmd-float-caption .scholmd-caption-head {
+  font-weight: bold;
+}
+
+.scholmd-float-caption .scholmd-caption-head-prefix:after {
+  // add a non-breaking space after caption head prefix
+  content: "\a0"
+}
+
+.scholmd-caption-head:after {
+  // add a space after caption head
+  content: " "
+}
+
 // Flexbox cross-browser pragma
 // (We rely on Flexbox support for aligning captions in floats correctly. Otherwise, there is no way to make caption both justified and centered if too short.)
 
@@ -74,29 +93,34 @@ pre code {
   justify-content: center;
 }
 
-// Core alignment of figures
+// Core alignment of float objects
 
-figure {
+.scholmd-float {
   position: relative;
   text-align: center;
-  margin:20px auto 20px;
+  margin: 20px auto 20px;
   padding: 10px 0px 10px;
   width: 100%;
 }
 
+.scholmd-float-content {
+  width: 75%;
+  margin: auto;
+}
 
-figure>figure {
+.scholmd-widefloat > .scholmd-float-content {
+  width: 90%;
+}
+
+.scholmd-subfig {
+  position: relative;
   margin: 0px auto 5px;
   padding: 0px 4px 0px;
   max-width: 100%;
   height: auto;
 }
 
-figure>figure>figcaption {
-  padding: 5px 0px 5px;
-}
-
-figure>.figcaption_wrapper {
+.scholmd-float-caption {
   left: auto;
   right: auto;
   text-align: justify;
@@ -107,19 +131,29 @@ figure>.figcaption_wrapper {
   .flex-centerAlign();
 }
 
-figure>img {
+.scholmd-float-subcaption {
+  left: auto;
+  right: auto;
+  text-align: left;
+  margin: 0px auto 0px;
+  padding: 5px 0px 5px;
+  width: 90%;
+  .use-flex();
+  .flex-centerAlign();
+}
+
+.scholmd-float-content img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-figure.algorithm {
+.scholmd-algorithm > .scholmd-float-content {
   text-align: left;
   padding: 6px 0px 6px;
-  width: 80%;
 }
 
-figure.algorithm p {
+.scholmd-algorithm > .scholmd-float-content p {
   white-space: pre;
   .hyphens(none);
   word-wrap: normal;
@@ -127,54 +161,30 @@ figure.algorithm p {
   word-break: keep-all;
 }
 
-figure.algorithm>figcaption {
-  width: 100%;
-}
-
-figure.tableFloat {
-  max-width: 80%;
-}
-
-table {
-  display: inline-table;
-}
-
-figure.tableFloat>table {
+.scholmd-table-float > .scholmd-float-content {
   position: relative;
   margin: 0px auto 5px;
   padding: 0px 0px 0px;
   width: auto;
-  max-width: 100%;
 }
 
-figure.tableFloat>figcaption {
+.scholmd-listing-float > .scholmd-float-content pre {
+  text-align: left;
+}
+
+.scholmd-listing-float > .scholmd-float-content table {
+  text-align: left;
   width: auto;
   max-width: 100%;
+  white-space: pre;
 }
 
-figure.codeFloat {
-  max-width: 80%;
-}
+// Overflow display contents resut in a scrollbar
 
-figure.codeFloat>pre {
-  text-align: left;
+.scholmd-float-content {
   overflow-x: auto;
 }
 
-figure.codeFloat>pre>code {
-  text-align: left;
-  width: auto;
-  max-width: 100%;
-}
-
-figure.codeFloat>table {
-  text-align: left;
-  width: auto;
-  max-width: 100%;
-  white-space: nowrap;
-}
-
-figure.codeFloat>figcaption {
-  width: auto;
-  max-width: 100%;
+.scholmd-math-display {
+  overflow-x: auto;
 }

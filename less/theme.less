@@ -113,9 +113,15 @@ h2 small, .h2 small { font-size: ceil(@font-size-base * 1.10); }
 h3 small, .h3 small,
 h4 small, .h4 small { font-size: @font-size-base; }
 
-figcaption {
+.scholmd-float-caption {
   font-size: ceil(@font-size-base * 1.0);
   line-height: @line-height-base * 0.9;
+  .hyphens();
+}
+
+.scholmd-float-subcaption {
+  font-size: ceil(@font-size-base * .85);
+  line-height: @line-height-base * 0.8;
   .hyphens();
 }
 
@@ -137,56 +143,93 @@ li>p {
   margin: ceil(@line-height-computed/2) 0;
 }
 
-// responsive breaking rules
+// ----------- Figures and other Floats
 
-// Code blocks break on modbile devices (except within floats and codeblocks, which overflox scroll)
+.scholmd-algorithm > .scholmd-float-content {
+  border-top: 1px solid @gray-light;
+  border-bottom: 1px solid @gray-light;
+  padding: 0px 10px;
+}
+
+.scholmd-algorithm > .scholmd-float-content p:first-of-type {
+  padding-top: @line-height-computed - 1;
+}
+
+.scholmd-table-float > .scholmd-float-content table {
+  .table;
+  .table-hover;
+  margin-bottom: 5px;
+  width: auto;
+}
+
+.scholmd-listing-float > .scholmd-float-content pre {
+  margin-bottom: 5px;
+}
+
+.scholmd-listing-float > .scholmd-float-content table {
+  margin-bottom: 5px;
+}
+
+// ----------- Responsive rules
+
 @media (max-width: @screen-sm-max) {
+  // Code blocks break on modbile devices (except within floats and codeblocks, which overflox scroll)
   code {
     .hard-break();
   }
-  
+
   pre>code {
     .no-break();
   }
-  
+
   figure code {
     .no-break();
   }
+
+  // Float block fill up more horizontal space on tablet
+  .scholmd-float-content {
+    width: 85%;
+    margin: auto;
+  }
+
+  .scholmd-widefloat > .scholmd-float-content {
+    width: 95%;
+  }
 }
 
-// ----------- Figures and other Floats
+@media (max-width: @screen-xs-max) {
+  // Figure caption sizes decrease on mobile
+  .scholmd-float-caption {
+    font-size: ceil(@font-size-base * .85);
+    line-height: @line-height-base * 0.8;
+    .hyphens();
+  }
 
-figure.algorithm {
-  border-top: 1.5px solid @gray-dark;
+  .scholmd-float-subcaption {
+    font-size: ceil(@font-size-base * .75);
+    line-height: @line-height-base * 0.7;
+    .hyphens();
+  }
+  
+  // Float block fill up more horizontal space on mobile
+  .scholmd-float-content {
+    width: 95%;
+    margin: auto;
+  }
+
+  .scholmd-widefloat > .scholmd-float-content {
+    width: 100%;
+  }
+
+  // Wider captions on mobile
+  .scholmd-float-caption {
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 7px;
+    width: 100%;
+  }
+
+  .scholmd-float-subcaption {
+    padding-top: 7px 0px 3px;
+  }
 }
-
-figure.algorithm>figcaption {
-  border-top: 1.5px solid @gray-dark;
-}
-
-figure.algorithm>p {
-  margin-bottom: 15px;
-}
-
-figure.tableFloat>table {
-  .table;
-  .table-hover;
-  width: auto;
-  overflow-x: auto;
-}
-
-figure.codeFloat>pre {
-  text-align: left;
-  overflow-x: auto;
-}
-
-figure.codeFloat>table {
-  overflow-x: auto;
-}
-
-.displayMath {
-  overflow-x: auto;
-}
-
-
-//TODO
