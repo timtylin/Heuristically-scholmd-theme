@@ -158,6 +158,7 @@ li>p {
 .scholmd-table-float > .scholmd-float-content table {
   .table;
   .table-hover;
+  .hyphens();
   margin-bottom: 5px;
   width: auto;
 }
@@ -188,12 +189,12 @@ li>p {
 
   // Float block fill up more horizontal space on tablet
   .scholmd-float-content {
-    width: 85%;
+    width: 75%;
     margin: auto;
   }
 
   .scholmd-widefloat > .scholmd-float-content {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -201,19 +202,15 @@ li>p {
   // Figure caption sizes decrease on mobile
   .scholmd-float-caption {
     font-size: ceil(@font-size-base * .85);
-    line-height: @line-height-base * 0.8;
-    .hyphens();
   }
 
   .scholmd-float-subcaption {
     font-size: ceil(@font-size-base * .75);
-    line-height: @line-height-base * 0.7;
-    .hyphens();
   }
   
   // Float block fill up more horizontal space on mobile
   .scholmd-float-content {
-    width: 95%;
+    width: 85%;
     margin: auto;
   }
 
