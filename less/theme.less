@@ -125,6 +125,15 @@ h4 small, .h4 small { font-size: @font-size-base; }
   .hyphens();
 }
 
+
+.scholmd-crossref a {
+  color: @text-color;
+  &:hover,
+  &:focus {
+    color: lighten(@text-color, 15%);
+  }
+}
+
 code {
   font-size: round(@font-size-base * 0.95);
 }
@@ -189,12 +198,12 @@ li>p {
 
   // Float block fill up more horizontal space on tablet
   .scholmd-float-content {
-    width: 75%;
+    width: 85%;
     margin: auto;
   }
 
   .scholmd-widefloat > .scholmd-float-content {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -210,7 +219,7 @@ li>p {
   
   // Float block fill up more horizontal space on mobile
   .scholmd-float-content {
-    width: 85%;
+    width: 80%;
     margin: auto;
   }
 
@@ -227,6 +236,6 @@ li>p {
   }
 
   .scholmd-float-subcaption {
-    padding-top: 7px 0px 3px;
+    padding: 5px 3px 3px;
   }
 }

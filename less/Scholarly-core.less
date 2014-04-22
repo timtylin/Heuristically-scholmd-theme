@@ -69,43 +69,21 @@ pre code {
   content: " "
 }
 
-// Flexbox cross-browser pragma
-// (We rely on Flexbox support for aligning captions in floats correctly. Otherwise, there is no way to make caption both justified and centered if too short.)
-
-.use-flex() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.flex-centerAlign() {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
 // Core alignment of float objects
 
 .scholmd-float {
   position: relative;
-  text-align: center;
   margin: 20px auto 20px;
   padding: 10px 0px 10px;
   width: 100%;
 }
 
 .scholmd-float-content {
-  width: 70%;
   margin: auto;
+  position: relative;
+  text-align: center;
+  vertical-align: baseline;
+  width: 70%;
 }
 
 .scholmd-widefloat > .scholmd-float-content {
@@ -113,7 +91,6 @@ pre code {
 }
 
 .scholmd-subfig {
-  position: relative;
   margin: 0px auto 5px;
   padding: 0px 4px 0px;
   max-width: 100%;
@@ -121,31 +98,33 @@ pre code {
 }
 
 .scholmd-float-caption {
-  left: auto;
-  right: auto;
-  text-align: justify;
+  text-align: center;
   margin: 0px auto 0px;
   padding: 10px 0px 5px;
   width: 90%;
-  .use-flex();
-  .flex-centerAlign();
+  figcaption {
+    text-align: justify;
+  }
 }
 
 .scholmd-float-subcaption {
-  left: auto;
-  right: auto;
-  text-align: left;
+  text-align: center;
   margin: 0px auto 0px;
-  padding: 5px 0px 5px;
-  width: 90%;
-  .use-flex();
-  .flex-centerAlign();
+  padding: 5px;
+  width: 100%;
+  float: left;
+  figcaption {
+    text-align: left;
+  }
+}
+
+figcaption {
+  display: inline-block;
 }
 
 .scholmd-float-content img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  //only use subfig elements for layout
+  width: 100%;
 }
 
 .scholmd-algorithm > .scholmd-float-content {
@@ -162,9 +141,8 @@ pre code {
 }
 
 .scholmd-table-float > .scholmd-float-content {
-  position: relative;
   margin: 0px auto 5px;
-  padding: 0px 0px 0px;
+  padding: 0px;
   width: auto;
 }
 
