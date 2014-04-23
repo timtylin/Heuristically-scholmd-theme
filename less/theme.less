@@ -239,3 +239,28 @@ li>p {
     padding: 5px 3px 3px;
   }
 }
+
+// Print media rule: disble link addresses in certain areas
+@media print {
+  // disable showing link underline and href for some elements
+  .references,
+  .pull-right {
+    a, a:visited {
+      text-decoration: none;
+    }
+    a:after {
+      content: "";
+    }
+  }
+
+  abbr[title]:after {
+    content: "";
+  }
+
+  // do not show the alt version links
+  .pull-right {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+}
