@@ -95,7 +95,7 @@ pre code {
 
 .scholmd-subfig {
   margin: 0px auto 5px;
-  padding: 0px 4px 0px;
+  padding: 0px 5px 0px;
   max-width: 100%;
   height: auto;
 }
@@ -168,4 +168,11 @@ figcaption {
 
 .scholmd-math-display {
   overflow-x: auto;
+}
+
+// Figures might exceed 100% width due to padding of subfigs
+// in that case, we do not want to display scrollbar unnecessarily
+
+.scholmd-figure > .scholmd-float-content {
+  overflow-x: visible;
 }
