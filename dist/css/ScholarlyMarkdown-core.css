@@ -7,15 +7,9 @@
  *
  */
 
-// Core variables and mixins
-@import "variables.less";
-@import "mixins.less";
-
-// --- Base formatting
-
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
   vertical-align: baseline;
 }
 
@@ -23,70 +17,67 @@ table {
   display: inline-table;
 }
 
-// --- Line-break handling
-
-.hard-break () {
-  .hyphens(none);
-  -ms-word-break: break-all;
-  word-break: break-word;
-  word-break: break-all;
-}
-
-.hyphen-break () {
-  .hyphens();
-}
-
-.no-break () {
-  .hyphens(none);
-  word-wrap: normal;
+code {
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+       -o-hyphens: none;
+          hyphens: none;
   word-break: keep-all;
+  word-wrap: break-word;
+  word-wrap: normal;
   white-space: pre;
 }
 
-code {
-  .no-break();
-}
-
 pre code {
-  .no-break();
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+       -o-hyphens: none;
+          hyphens: none;
+  word-break: keep-all;
+  word-wrap: break-word;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 .references a {
-  .hard-break();
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+       -o-hyphens: none;
+          hyphens: none;
+  -ms-word-break: break-all;
+      word-break: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
-// --- Scholarly Floats and Figures
-
-// Basic formatting of caption prefixes
 .scholmd-float-caption .scholmd-caption-head {
   font-weight: bold;
 }
 
 .scholmd-float-caption .scholmd-caption-head-prefix:after {
-  // add a non-breaking space after caption head prefix
-  content: "\a0"
+  content: "\a0";
 }
 
 .scholmd-caption-head:after {
-  // add a space after caption head
-  content: " "
+  content: " ";
 }
-
-// Core alignment of float objects
 
 .scholmd-float {
   position: relative;
-  margin: 20px auto 20px;
-  padding: 10px 0px 10px;
   width: 100%;
+  padding: 10px 0 10px;
+  margin: 20px auto 20px;
 }
 
 .scholmd-float-content {
-  margin: auto;
   position: relative;
+  width: 70%;
+  margin: auto;
   text-align: center;
   vertical-align: baseline;
-  width: 70%;
 }
 
 .scholmd-widefloat > .scholmd-float-content {
@@ -94,31 +85,33 @@ pre code {
 }
 
 .scholmd-subfig {
-  margin: 0px auto 5px;
-  padding: 0px 4px 0px;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  padding: 0 4px 0px;
+  margin: 0 auto 5px;
 }
 
 .scholmd-float-caption {
-  text-align: center;
-  margin: 0px auto 0px;
-  padding: 10px 0px 5px;
   width: 90%;
-  figcaption {
-    text-align: justify;
-  }
+  padding: 10px 0 5px;
+  margin: 0 auto 0px;
+  text-align: center;
+}
+
+.scholmd-float-caption figcaption {
+  text-align: justify;
 }
 
 .scholmd-float-subcaption {
-  text-align: center;
-  margin: 0px auto 0px;
-  padding: 5px;
-  width: 100%;
   float: left;
-  figcaption {
-    text-align: left;
-  }
+  width: 100%;
+  padding: 5px;
+  margin: 0 auto 0px;
+  text-align: center;
+}
+
+.scholmd-float-subcaption figcaption {
+  text-align: left;
 }
 
 figcaption {
@@ -126,27 +119,31 @@ figcaption {
 }
 
 .scholmd-float-content img {
-  //only use subfig elements for layout
   width: 100%;
 }
 
 .scholmd-algorithm > .scholmd-float-content {
+  padding: 6px 0 6px;
   text-align: left;
-  padding: 6px 0px 6px;
 }
 
 .scholmd-algorithm > .scholmd-float-content p {
-  white-space: pre;
-  .hyphens(none);
-  word-wrap: normal;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+       -o-hyphens: none;
+          hyphens: none;
   -ms-word-break: keep-all;
-  word-break: keep-all;
+      word-break: keep-all;
+  word-wrap: break-word;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 .scholmd-table-float > .scholmd-float-content {
-  margin: 0px auto 5px;
-  padding: 0px;
   width: auto;
+  padding: 0;
+  margin: 0 auto 5px;
 }
 
 .scholmd-listing-float > .scholmd-float-content pre {
@@ -154,13 +151,11 @@ figcaption {
 }
 
 .scholmd-listing-float > .scholmd-float-content table {
-  text-align: left;
   width: auto;
   max-width: 100%;
+  text-align: left;
   white-space: pre;
 }
-
-// Overflow display contents resut in a scrollbar
 
 .scholmd-float-content {
   overflow-x: auto;

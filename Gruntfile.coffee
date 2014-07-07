@@ -8,12 +8,14 @@ module.exports = (grunt) ->
           paths: ['less', 'tmp', '<%= bowerDirectory %>/bootstrap/less']
         files:
           'dist/css/ScholarlyMarkdown-BS3.css': ['less/theme.less']
+          'dist/css/ScholarlyMarkdown-core.css': ['less/Scholarly-core.less']
     recess:
       dist:
         options:
           compile: true
         files:
           'dist/css/ScholarlyMarkdown-BS3.css': ['dist/css/ScholarlyMarkdown-BS3.css']
+          'dist/css/ScholarlyMarkdown-core.css': ['dist/css/ScholarlyMarkdown-core.css']
     watch:
       less:
         files: ['less/*.less','index.html','examples/*.html']
