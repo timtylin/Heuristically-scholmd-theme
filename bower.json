@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-theme-Scholarly",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "author": "Tim T.Y. Lin",
   "main": "dist/bootstrap.css",
