@@ -13,10 +13,6 @@ img {
   vertical-align: baseline;
 }
 
-table {
-  display: inline-table;
-}
-
 code {
   -webkit-hyphens: none;
      -moz-hyphens: none;
