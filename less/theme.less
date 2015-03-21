@@ -1,7 +1,7 @@
 /*!
- * Scholarly Bootstrap v0.1.2
+ * Scholarly Bootstrap v0.1.3
  *
- * Copyright 2014 Tim T.Y. Lin
+ * Copyright 2014-2015 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -213,14 +213,14 @@ table {
     .no-break();
   }
 
-  // Float block fill up more horizontal space on tablet
+  // Can adjust float content width according to size class
   .scholmd-float-content {
-    width: 85%;
+    width: 95%;
     margin: auto;
   }
 
   .scholmd-widefloat > .scholmd-float-content {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -234,9 +234,9 @@ table {
     font-size: ceil(@font-size-base * .75);
   }
   
-  // Float block fill up more horizontal space on mobile
+  // Can adjust float content width according to size class
   .scholmd-float-content {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
 

@@ -1,7 +1,7 @@
 /*!
- * Scholarly Bootstrap v0.1.2
+ * Scholarly Bootstrap v0.1.3
  *
- * Copyright 2014 Tim T.Y. Lin
+ * Copyright 2014-2015 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -2409,9 +2409,9 @@ a.list-group-item-danger.active:focus {
 }
 
 /*
- * Core CSS scaffold for Scholarly Markdown HTML v0.1.2
+ * Core CSS scaffold for Scholarly Markdown HTML v0.1.3
  *
- * Copyright 2013 Tim T.Y. Lin
+ * Copyright 2014-2015 Tim T.Y. Lin
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -2480,14 +2480,14 @@ pre code {
 
 .scholmd-float-content {
   position: relative;
-  width: 70%;
+  width: 90%;
   margin: auto;
   text-align: center;
   vertical-align: baseline;
 }
 
 .scholmd-widefloat > .scholmd-float-content {
-  width: 90%;
+  width: 100%;
 }
 
 .scholmd-subfig {
@@ -2907,11 +2907,11 @@ table > tbody > tr:hover > th {
     white-space: pre;
   }
   .scholmd-float-content {
-    width: 85%;
+    width: 95%;
     margin: auto;
   }
   .scholmd-widefloat > .scholmd-float-content {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -2923,7 +2923,7 @@ table > tbody > tr:hover > th {
     font-size: 12px;
   }
   .scholmd-float-content {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   .scholmd-widefloat > .scholmd-float-content {
