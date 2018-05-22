@@ -164,3 +164,7 @@ figcaption {
 .scholmd-figure > .scholmd-float-content {
   overflow-x: visible;
 }
+
+.scholmd-math-inline {
+  display: inline-block;
+}

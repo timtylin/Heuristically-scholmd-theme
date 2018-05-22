@@ -2575,6 +2575,10 @@ figcaption {
   overflow-x: visible;
 }
 
+.scholmd-math-inline {
+  display: inline-block;
+}
+
 html {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;

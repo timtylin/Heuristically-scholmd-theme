@@ -172,3 +172,10 @@ figcaption {
 .scholmd-figure > .scholmd-float-content {
   overflow-x: visible;
 }
+
+// Bugfix for MathJax in latest Safari/WKWebView resulting in newlines (2018-05-22)
+// see <https://github.com/mathjax/MathJax/issues/1982>
+
+.scholmd-math-inline {
+  display: inline-block;
+}
